@@ -1,4 +1,4 @@
-require "local_dump/version"
+require 'local_dump/version'
 
 module LocalDump
   class Error < StandardError; end
