@@ -1,28 +1,28 @@
-# LocalDump
+# local_dump
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/local_dump`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Rake tasks for Dump and Restore PostgreSQL database in Rails (based on pg_dump/pg_restore)
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application's Gemfile and then execute `bundle install`
 
 ```ruby
 gem 'local_dump'
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install local_dump
-
 ## Usage
 
-TODO: Write usage instructions here
+Dump the database, which will be created in `db/dump/` with name `db-app-name_my-dump-name.psql`
+
+```ruby
+bundle exec rake local:db:dump'[my-dump-name]'
+```
+
+Restore the database dump
+
+```ruby
+bundle exec rake local:db:restore'[my-dump-name]'
+```
 
 ## Development
 
@@ -32,7 +32,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kirillweb/local_dump.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kirillshevch/local_dump.
 
 ## License
 
